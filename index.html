@@ -1,111 +1,49 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0e594a">
-<title>کتابخانه مسجد حضرت مهدی منتظر(عج)</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#123b32"><title>کتابخانه مسجد حضرت مهدی منتظر(عج)</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#f4f0e5;color:#173d35;font-family:Tahoma,Arial,sans-serif}
-.app{max-width:520px;margin:auto;min-height:100vh;background:#f8f5ec}
-header{position:sticky;top:0;z-index:5;background:#0e594a;color:#fff;padding:16px 18px;box-shadow:0 2px 8px #0002}
-header h1{font-size:19px;margin:0 0 5px}header small{opacity:.85}
-main{padding:16px;padding-bottom:88px}.hero{background:linear-gradient(145deg,#0e594a,#174b40);color:#fff;border-radius:22px;padding:22px;margin-bottom:15px}
-.hero h2{margin:0 0 7px;font-size:22px}.hero p{margin:0;opacity:.9}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.card{background:#fff;border-radius:17px;padding:16px;box-shadow:0 2px 10px #173d3512;border:1px solid #e6dfd0}
-.stat{font-size:25px;font-weight:bold;margin-top:8px}.muted{color:#777;font-size:12px}.title{font-size:18px;font-weight:bold;margin:20px 0 10px}
-button,.btn{border:0;border-radius:13px;padding:12px 15px;background:#0e594a;color:white;font-weight:bold;cursor:pointer}
-button.secondary{background:#e8eee9;color:#0e594a}.full{width:100%;margin-top:10px}
-input,select{width:100%;padding:13px;border:1px solid #ddd4c2;border-radius:12px;background:#fff;font-family:inherit;margin:5px 0 10px}
-.row{display:flex;gap:8px}.row>*{flex:1}.item{background:#fff;border-radius:15px;padding:13px;margin:8px 0;border:1px solid #e6dfd0}
-.badge{display:inline-block;padding:5px 9px;border-radius:20px;background:#dff2df;color:#246b38;font-size:11px}.bad{background:#ffe0dc;color:#a33}.warn{background:#fff0c9;color:#855d00}
-nav{position:fixed;bottom:0;left:0;right:0;max-width:520px;margin:auto;background:#fff;border-top:1px solid #ddd5c5;display:flex;z-index:10}
-nav button{background:none;color:#557069;border-radius:0;flex:1;padding:11px 3px;font-size:11px}nav button.active{color:#0e594a;font-weight:bold}
-.hidden{display:none!important}.empty{text-align:center;color:#777;padding:30px}
-.modal{position:fixed;inset:0;background:#0007;display:flex;align-items:end;z-index:20}.sheet{background:#f8f5ec;width:100%;max-width:520px;margin:auto;border-radius:24px 24px 0 0;padding:20px;max-height:90vh;overflow:auto}
-</style>
-</head>
-<body>
-<div class="app">
-<header><h1>📚 کتابخانه مسجد حضرت مهدی منتظر(عج)</h1><small>سامانه مدیریت کتابخانه</small></header>
-<main id="main"></main>
-<nav>
-<button data-page="home" class="active">⌂<br>خانه</button>
-<button data-page="books">📖<br>کتاب‌ها</button>
-<button data-page="members">👥<br>اعضا</button>
-<button data-page="loans">🔄<br>امانت‌ها</button>
-<button data-page="more">•••<br>بیشتر</button>
-</nav>
-</div>
-<div id="modal" class="modal hidden" aria-hidden="true"><div class="sheet" id="sheet"></div></div>
+:root{--g:#123b32;--g2:#23644f;--gold:#d8b56d;--bg:#f3f6f2;--ink:#202b25;--muted:#6d786f}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 13px;background:var(--g2);color:#fff;font-weight:bold}.wrap{max-width:950px;margin:auto;padding:14px}.hero{background:linear-gradient(135deg,#0d2d25,#23644f);color:white;border-radius:20px;padding:22px 18px;margin:8px 0 15px}.hero small{color:#f1dca9}.hero h1{font-size:22px;line-height:1.8;margin:7px 0}.hero p{line-height:1.8;margin:0;color:#e1eee7}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}.stat,.card{background:white;border-radius:15px;padding:14px;box-shadow:0 3px 12px #10291d0b}.stat strong{display:block;font-size:24px;color:var(--g)}.stat span{font-size:12px;color:var(--muted)}.tabs{display:flex;gap:8px;overflow:auto;padding:4px 0 12px}.tabs button{white-space:nowrap;background:#e2eae3;color:var(--g)}.tabs button.active{background:var(--g);color:#fff}.section-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:12px 0}.section-title h2{font-size:18px;margin:0}.search{width:100%;padding:13px;border:1px solid #dbe3db;border-radius:12px;margin-bottom:12px;background:#fff}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:12px}.book{border:1px solid #e8ede8}.book h3{font-size:16px;line-height:1.7;margin:0 0 7px}.meta{font-size:12px;color:var(--muted);line-height:1.9}.pill{display:inline-block;border-radius:20px;padding:5px 9px;font-size:11px;font-weight:bold;background:#e4f3e7;color:#22603a;margin-top:8px}.pill.out{background:#fff0e8;color:#9c4c27}.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}.actions button{font-size:12px;padding:9px 10px}.secondary{background:#e8eee9;color:var(--g)}.danger{background:#fae7e5;color:#9b3434}.form{display:grid;gap:10px}.form input,.form select{width:100%;padding:12px;border:1px solid #dce4dc;border-radius:11px;background:white}.form label{font-size:13px;color:#45554a}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hidden{display:none!important}.empty{text-align:center;padding:24px;color:var(--muted);background:#fff;border-radius:14px}.list{display:grid;gap:9px}.item{background:white;padding:13px;border-radius:13px;display:flex;align-items:center;justify-content:space-between;gap:10px}.item strong{line-height:1.8}.notice{font-size:12px;color:var(--muted);line-height:1.9}.footer{text-align:center;color:var(--muted);font-size:11px;padding:22px 8px}@media(max-width:450px){.stat{padding:10px}.stat strong{font-size:20px}.hero h1{font-size:20px}.form-row{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<header class="hero"><small>سامانه مدیریت کتابخانه</small><h1>کتابخانه مسجد حضرت مهدی منتظر(عج)</h1><p>جست‌وجوی کتاب، ثبت امانت و مدیریت ساده کتابخانه</p></header>
+<div class="stats"><div class="stat"><strong id="statBooks">۰</strong><span>عنوان کتاب</span></div><div class="stat"><strong id="statAvailable">۰</strong><span>موجود برای امانت</span></div><div class="stat"><strong id="statLoans">۰</strong><span>امانت فعال</span></div></div>
+<nav class="tabs"><button class="active" data-tab="catalog">📚 فهرست کتاب‌ها</button><button data-tab="loans">📖 امانت‌ها</button><button data-tab="members">👥 اعضا</button><button data-tab="manage">⚙️ مدیریت</button></nav>
+<main>
+<section id="tab-catalog"><div class="section-title"><h2>فهرست کتاب‌ها</h2><button id="jumpAdd">＋ افزودن کتاب</button></div><input id="search" class="search" placeholder="نام کتاب، نویسنده یا موضوع را جست‌وجو کن…"><div id="booksList" class="grid"></div></section>
+<section id="tab-loans" class="hidden"><div class="section-title"><h2>امانت‌های کتابخانه</h2><button id="jumpLoan">＋ امانت جدید</button></div><div id="loansList" class="list"></div></section>
+<section id="tab-members" class="hidden"><div class="section-title"><h2>اعضای کتابخانه</h2></div><div id="membersList" class="list"></div></section>
+<section id="tab-manage" class="hidden">
+<div class="section-title"><h2>مدیریت کتابخانه</h2></div>
+<div class="card"><h3>افزودن کتاب</h3><form id="bookForm" class="form"><label>نام کتاب<input required id="bookTitle" placeholder="مثلاً جاذبه و دافعه علی(ع)"></label><div class="form-row"><label>نویسنده<input id="bookAuthor" placeholder="نام نویسنده"></label><label>موضوع<input id="bookCategory" placeholder="دینی، داستان…"></label></div><button type="submit">ثبت کتاب</button></form></div>
+<div class="card" style="margin-top:12px"><h3>ثبت عضو جدید</h3><form id="memberForm" class="form"><label>نام و نام خانوادگی<input required id="memberName" placeholder="نام عضو"></label><label>شماره تماس (اختیاری)<input id="memberPhone" inputmode="tel" placeholder="شماره تماس"></label><button type="submit">ثبت عضو</button></form></div>
+<div class="card" style="margin-top:12px"><h3>ثبت امانت جدید</h3><form id="loanForm" class="form"><label>کتاب<select id="loanBook" required></select></label><label>عضو<select id="loanMember" required></select></label><div class="form-row"><label>تاریخ امانت<input id="loanDate" type="date" required></label><label>موعد بازگشت<input id="dueDate" type="date" required></label></div><button type="submit">ثبت امانت</button></form></div>
+<div class="card" style="margin-top:12px"><h3>پشتیبان‌گیری</h3><p class="meta">اطلاعات این نسخه در همین مرورگر ذخیره می‌شود و بین گوشی‌های مختلف مشترک نیست.</p><div class="actions"><button id="exportBtn">دانلود پشتیبان</button><button id="importBtn" class="secondary">بازیابی پشتیبان</button><input id="importFile" class="hidden" type="file" accept="application/json"></div><p class="notice">برای استفاده عمومی با چند مدیر یا چند گوشی، باید دیتابیس آنلاین و ورود امن مدیر اضافه شود. اطلاعات شخصی واقعی را در نسخه آزمایشی عمومی وارد نکن.</p><button id="resetBtn" class="danger">پاک کردن همه اطلاعات</button></div>
+</section></main><div class="footer">نسخه آغازین کتابخانه مسجد حضرت مهدی منتظر(عج)</div></div>
 <script>
-const key="mosqueLibraryV1";
-let db=JSON.parse(localStorage.getItem(key)||'{"books":[],"members":[],"loans":[]}');
-const save=()=>localStorage.setItem(key,JSON.stringify(db));
-const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
-const main=document.getElementById("main");
-function page(p){
- document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===p));
- if(p==="home") home(); if(p==="books") books(); if(p==="members") members(); if(p==="loans") loans(); if(p==="more") more();
-}
-function home(){
- const active=db.loans.filter(x=>!x.returned).length, overdue=db.loans.filter(x=>!x.returned && new Date(x.due)<new Date()).length;
- main.innerHTML=`<div class="hero"><h2>سلام 👋</h2><p>به سامانه کتابخانه خوش آمدید</p></div>
- <div class="grid">
- <div class="card">📚<div class="stat">${db.books.length}</div><span class="muted">کل کتاب‌ها</span></div>
- <div class="card">👥<div class="stat">${db.members.length}</div><span class="muted">اعضای فعال</span></div>
- <div class="card">🔄<div class="stat">${active}</div><span class="muted">کتاب‌های امانت</span></div>
- <div class="card">⏰<div class="stat">${overdue}</div><span class="muted">دیرکرد</span></div></div>
- <div class="title">دسترسی سریع</div><div class="row">
- <button onclick="addBook()">➕ کتاب</button><button onclick="addMember()">👤 عضو</button></div>
- <button class="full secondary" onclick="addLoan()">📥 ثبت امانت جدید</button>
- <div class="title">آخرین امانت‌ها</div>${db.loans.slice(-4).reverse().map(loanItem).join("")||'<div class="empty">هنوز امانتی ثبت نشده است.</div>'}`;
-}
-function books(){
- main.innerHTML=`<div class="title">📖 فهرست کتاب‌ها</div>
- <input id="q" placeholder="جستجوی عنوان، نویسنده یا کد..." oninput="renderBooks()">
- <button class="full" onclick="addBook()">➕ افزودن کتاب</button><div id="bookList"></div>`;renderBooks();
-}
-function renderBooks(){
- const q=(document.getElementById("q")?.value||"").toLowerCase();
- const a=db.books.filter(b=>(b.title+" "+b.author+" "+b.code).toLowerCase().includes(q));
- document.getElementById("bookList").innerHTML=a.map(b=>`<div class="item"><b>${esc(b.title)}</b><br><span class="muted">${esc(b.author)} · ${esc(b.code)}</span><br><span class="badge ${b.available?'':'bad'}">${b.available?'موجود':'امانت داده شده'}</span></div>`).join("")||'<div class="empty">کتابی پیدا نشد.</div>';
-}
-function members(){
- main.innerHTML=`<div class="title">👥 اعضای کتابخانه</div><input id="mq" placeholder="جستجوی نام یا کد..." oninput="renderMembers()"><button class="full" onclick="addMember()">➕ افزودن عضو</button><div id="memberList"></div>`;renderMembers();
-}
-function renderMembers(){
- const q=(document.getElementById("mq")?.value||"").toLowerCase();
- const a=db.members.filter(m=>(m.name+" "+m.code+" "+m.phone).toLowerCase().includes(q));
- document.getElementById("memberList").innerHTML=a.map(m=>`<div class="item"><b>${esc(m.name)}</b><br><span class="muted">${esc(m.code)} · ${esc(m.phone)}</span></div>`).join("")||'<div class="empty">عضوی ثبت نشده است.</div>';
-}
-function loans(){
- const active=db.loans.filter(x=>!x.returned);
- main.innerHTML=`<div class="title">🔄 امانت‌ها</div><button class="full" onclick="addLoan()">📥 ثبت امانت</button>
- <div class="title">امانت‌های جاری</div>${active.map(loanItem).join("")||'<div class="empty">امانت جاری ندارید.</div>'}`;
-}
-function loanItem(l){
- const m=db.members.find(x=>x.code===l.member), b=db.books.find(x=>x.code===l.book), late=!l.returned&&new Date(l.due)<new Date();
- return `<div class="item"><b>${esc(b?.title||l.book)}</b><br><span class="muted">عضو: ${esc(m?.name||l.member)} · تا ${esc(l.due)}</span><br><span class="badge ${late?'bad':'warn'}">${late?'دیرکرد':'امانت'}</span>${!l.returned?` <button class="secondary" style="float:left;padding:7px 10px" onclick="returnBook('${l.id}')">ثبت برگشت</button>`:""}</div>`;
-}
-function more(){main.innerHTML=`<div class="title">••• بیشتر</div><div class="card"><b>امتیازات و گزارش‌ها</b><p class="muted">نسخه اول سامانه است. امکانات بیشتر را می‌توان به همین نسخه اضافه کرد.</p></div><button class="full secondary" onclick="backup()">💾 پشتیبان اطلاعات</button><button class="full" onclick="resetDemo()">🧹 پاک کردن اطلاعات آزمایشی</button>`}
-function openModal(html){document.getElementById("sheet").innerHTML=html;document.getElementById("modal").classList.remove("hidden")}
-function closeModal(){document.getElementById("modal").classList.add("hidden")}
-document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
-function addBook(){openModal(`<h3>افزودن کتاب</h3><input id="bt" placeholder="عنوان کتاب"><input id="ba" placeholder="نویسنده"><input id="bc" placeholder="کد کتاب، مثلا B001"><button class="full" onclick="saveBook()">ثبت کتاب</button>`)}
-function saveBook(){const b={title:bt.value.trim(),author:ba.value.trim(),code:bc.value.trim(),available:true};if(!b.title||!b.code)return alert("عنوان و کد کتاب را وارد کنید.");db.books.push(b);save();closeModal();page("books")}
-function addMember(){openModal(`<h3>افزودن عضو</h3><input id="mn" placeholder="نام و نام خانوادگی"><input id="mp" placeholder="شماره تماس"><input id="mc" placeholder="کد عضو، مثلا M001"><button class="full" onclick="saveMember()">ثبت عضو</button>`)}
-function saveMember(){const m={name:mn.value.trim(),phone:mp.value.trim(),code:mc.value.trim()};if(!m.name||!m.code)return alert("نام و کد عضو را وارد کنید.");db.members.push(m);save();closeModal();page("members")}
-function addLoan(){
- if(!db.members.length||!db.books.filter(b=>b.available).length)return alert("ابتدا حداقل یک عضو و یک کتاب موجود ثبت کنید.");
- openModal(`<h3>📥 ثبت امانت</h3><label>عضو</label><select id="lm">${db.members.map(m=>`<option value="${esc(m.code)}">${esc(m.name)} — ${esc(m.code)}</option>`).join("")}</select><label>کتاب</label><select id="lb">${db.books.filter(b=>b.available).map(b=>`<option value="${esc(b.code)}">${esc(b.title)} — ${esc(b.code)}</option>`).join("")}</select><label>موعد برگشت</label><input id="ld" type="date"><button class="full" onclick="saveLoan()">ثبت امانت</button>`);ld.value=new Date(Date.now()+7*864e5).toISOString().slice(0,10)
-}
-function saveLoan(){const b=db.books.find(x=>x.code===lb.value);const l={id:Date.now().toString(),member:lm.value,book:lb.value,due:ld.value,returned:false};db.loans.push(l);b.available=false;save();closeModal();page("loans")}
-function returnBook(id){const l=db.loans.find(x=>x.id===id);if(!l)return;l.returned=true;l.returnDate=new Date().toISOString().slice(0,10);const b=db.books.find(x=>x.code===l.book);if(b)b.available=true;save();page("loans")}
-function backup(){const blob=new Blob([JSON.stringify(db,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="کتابخانه-مسجد-پشتیبان.json";a.click()}
-function resetDemo(){if(confirm("تمام اطلاعات ذخیره‌شده روی این گوشی پاک شود؟")){localStorage.removeItem(key);db={books:[],members:[],loans:[]};page("home")}}
-document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>page(b.dataset.page));
-page("home");
-</script>
-</body>
-</html>
+const KEY='mahdi_library_v1';let db=load();
+function load(){try{let x=JSON.parse(localStorage.getItem(KEY));if(x&&x.books&&x.members&&x.loans)return x}catch(e){}return {books:[{id:1,title:'آموزش قرآن کریم',author:'',category:'قرآن',available:true},{id:2,title:'جاذبه و دافعه علی(ع)',author:'شهید مرتضی مطهری',category:'دینی',available:true},{id:3,title:'داستان راستان',author:'شهید مرتضی مطهری',category:'داستان',available:true}],members:[],loans:[],nextBook:4,nextMember:1,nextLoan:1}}
+const fa=n=>new Intl.NumberFormat('fa-IR').format(n),today=()=>new Date().toISOString().slice(0,10),plusDays=(s,n)=>{let d=new Date(s+'T00:00:00');d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)},niceDate=s=>s?new Date(s+'T00:00:00').toLocaleDateString('fa-IR'):'—';
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}
+function tab(n){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));document.getElementById('tab-'+n).classList.remove('hidden');document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===n))}
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>tab(b.dataset.tab));document.getElementById('search').oninput=renderBooks;document.getElementById('jumpAdd').onclick=()=>{tab('manage');document.getElementById('bookTitle').focus()};document.getElementById('jumpLoan').onclick=()=>{tab('manage');document.getElementById('loanBook').focus()};
+function render(){document.getElementById('statBooks').textContent=fa(db.books.length);document.getElementById('statAvailable').textContent=fa(db.books.filter(b=>b.available).length);document.getElementById('statLoans').textContent=fa(db.loans.filter(l=>!l.returnDate).length);renderBooks();renderLoans();renderMembers();fillSelects()}
+function renderBooks(){let q=document.getElementById('search').value.trim().toLowerCase(),a=db.books.filter(b=>[b.title,b.author,b.category].join(' ').toLowerCase().includes(q));document.getElementById('booksList').innerHTML=a.length?a.map(b=>`<article class="card book"><h3>${esc(b.title)}</h3><div class="meta">نویسنده: ${esc(b.author||'ثبت نشده')}<br>موضوع: ${esc(b.category||'عمومی')}<br>کد: ${fa(b.id)}</div><span class="pill ${b.available?'':'out'}">${b.available?'موجود':'امانت داده شده'}</span><div class="actions">${b.available?`<button onclick="quickLoan(${b.id})">ثبت امانت</button>`:''}<button class="secondary" onclick="editBook(${b.id})">ویرایش</button><button class="danger" onclick="deleteBook(${b.id})">حذف</button></div></article>`).join(''):'<div class="empty">کتابی پیدا نشد. از بخش مدیریت کتاب اضافه کن.</div>'}
+function renderLoans(){let a=[...db.loans].sort((x,y)=>y.id-x.id);document.getElementById('loansList').innerHTML=a.length?a.map(l=>{let b=db.books.find(x=>x.id===l.bookId),m=db.members.find(x=>x.id===l.memberId),late=!l.returnDate&&l.dueDate<today();return `<div class="item"><div><strong>${esc(b?.title||'کتاب حذف‌شده')}</strong><div class="meta">عضو: ${esc(m?.name||'—')} · امانت: ${niceDate(l.date)} · موعد: ${niceDate(l.dueDate)}</div><span class="pill ${l.returnDate?'': 'out'}">${l.returnDate?'برگشت داده شد':late?'دیرکرد':'در امانت'}</span></div>${l.returnDate?'':`<button onclick="returnLoan(${l.id})">ثبت برگشت</button>`}</div>`}).join(''):'<div class="empty">هنوز امانتی ثبت نشده است.</div>'}
+function renderMembers(){document.getElementById('membersList').innerHTML=db.members.length?db.members.map(m=>`<div class="item"><div><strong>${esc(m.name)}</strong><div class="meta">کد عضویت: ${fa(m.id)} · تماس: ${esc(m.phone||'ثبت نشده')} · امتیاز: ${fa(m.points||0)}</div></div><button class="danger" onclick="deleteMember(${m.id})">حذف</button></div>`).join(''):'<div class="empty">هنوز عضوی ثبت نشده است.</div>'}
+function fillSelects(){document.getElementById('loanBook').innerHTML=db.books.filter(b=>b.available).map(b=>`<option value="${b.id}">${esc(b.title)}</option>`).join('');document.getElementById('loanMember').innerHTML=db.members.map(m=>`<option value="${m.id}">${esc(m.name)}</option>`).join('')}
+document.getElementById('bookForm').onsubmit=e=>{e.preventDefault();db.books.push({id:db.nextBook++,title:document.getElementById('bookTitle').value.trim(),author:document.getElementById('bookAuthor').value.trim(),category:document.getElementById('bookCategory').value.trim(),available:true});e.target.reset();save();alert('کتاب ثبت شد.')};
+document.getElementById('memberForm').onsubmit=e=>{e.preventDefault();db.members.push({id:db.nextMember++,name:document.getElementById('memberName').value.trim(),phone:document.getElementById('memberPhone').value.trim(),points:0});e.target.reset();save();alert('عضو ثبت شد.')};
+document.getElementById('loanDate').value=today();document.getElementById('dueDate').value=plusDays(today(),7);document.getElementById('loanDate').onchange=()=>document.getElementById('dueDate').value=plusDays(document.getElementById('loanDate').value||today(),7);
+document.getElementById('loanForm').onsubmit=e=>{e.preventDefault();let bid=+document.getElementById('loanBook').value,mid=+document.getElementById('loanMember').value,b=db.books.find(x=>x.id===bid);if(!b||!db.members.some(x=>x.id===mid)){alert('اول کتاب و عضو را ثبت کن.');return}if(!b.available){alert('این کتاب موجود نیست.');return}db.loans.push({id:db.nextLoan++,bookId:bid,memberId:mid,date:document.getElementById('loanDate').value,dueDate:document.getElementById('dueDate').value,returnDate:''});b.available=false;save();alert('امانت ثبت شد.')};
+window.returnLoan=id=>{let l=db.loans.find(x=>x.id===id);if(!l||l.returnDate)return;l.returnDate=today();let b=db.books.find(x=>x.id===l.bookId),m=db.members.find(x=>x.id===l.memberId);if(b)b.available=true;if(m)m.points=(m.points||0)+1;save()};
+window.quickLoan=id=>{tab('manage');document.getElementById('loanBook').value=String(id);document.getElementById('loanMember').focus()};
+window.editBook=id=>{let b=db.books.find(x=>x.id===id),t=prompt('نام کتاب:',b.title);if(t===null)return;if(!t.trim()){alert('نام کتاب نمی‌تواند خالی باشد.');return}b.title=t.trim();b.author=prompt('نویسنده:',b.author||'')??b.author;b.category=prompt('موضوع:',b.category||'')??b.category;save()};
+window.deleteBook=id=>{if(db.loans.some(l=>l.bookId===id&&!l.returnDate)){alert('این کتاب امانت فعال دارد؛ اول برگشت را ثبت کن.');return}if(confirm('این کتاب حذف شود؟')){db.books=db.books.filter(b=>b.id!==id);save()}};
+window.deleteMember=id=>{if(db.loans.some(l=>l.memberId===id&&!l.returnDate)){alert('این عضو امانت فعال دارد؛ اول برگشت را ثبت کن.');return}if(confirm('این عضو حذف شود؟')){db.members=db.members.filter(m=>m.id!==id);save()}};
+document.getElementById('exportBtn').onclick=()=>{let u=URL.createObjectURL(new Blob([JSON.stringify(db,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download='poshtiban-ketabkhane.json';a.click();URL.revokeObjectURL(u)};
+document.getElementById('importBtn').onclick=()=>document.getElementById('importFile').click();document.getElementById('importFile').onchange=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);if(!d.books||!d.members||!d.loans)throw Error();if(confirm('اطلاعات فعلی با فایل پشتیبان جایگزین شود؟')){db=d;save();alert('بازیابی انجام شد.')}}catch(x){alert('فایل پشتیبان معتبر نیست.')}e.target.value=''};r.readAsText(f)};
+document.getElementById('resetBtn').onclick=()=>{if(confirm('همه اطلاعات پاک شود؟ این کار برگشت‌پذیر نیست.')){db={books:[],members:[],loans:[],nextBook:1,nextMember:1,nextLoan:1};save()}};render();
+</script></body></html>
